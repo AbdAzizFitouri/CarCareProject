@@ -1,0 +1,32 @@
+<div class="card my-5">
+    <a><div class="btn btn-info justify-content-center" routerLink="/addCentreAssurance"><span><i class="fas fa-plus"></i>     Ajouter un Centre d'assurance</span></div></a>
+    <div class="card-body">
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Identifiant</th>
+                    <th scope="col">Nom du Centre</th>
+                    <th scope="col">Adresse</th>
+                    <th scope="col">Longitude</th>
+                    <th scope="col">Latitude</th>
+                    <th scope="col">Horaires de Travail</th>
+                    <th scope="col">Numéro de Téléphone</th>
+                    <th scope="col" colspan="2">Manipulations</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let ca of data;">
+                    <td>{{ca.idCentreAssurance}}</td>
+                    <td>{{ca.nameCentreAssurance}}</td>
+                    <td>{{ca.localCentreAssurance}}</td>
+                    <td>{{ca.longCentreAssurance}}</td>
+                    <td>{{ca.latCentreAssurance}}</td>
+                    <td>{{ca.horaireCentreAssurance}}</td>
+                    <td>{{ca.numeroTelCentreAssurance}}</td>
+                    <td><button class="btn btn-success" (click)="RowSelected(ca)"><i class="fas fa-pen"></i></button></td>
+                    <td><button class="btn btn-danger" (click)="deleteCentreAssurance(ca.idCentreAssurance)" ><i class="fas fa-trash"></i></button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

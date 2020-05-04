@@ -1,0 +1,8 @@
+{
+  "appId": "com.exisit.carCare",
+  "appName": "CarCare",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {}
+}

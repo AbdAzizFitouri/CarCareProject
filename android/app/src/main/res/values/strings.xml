@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">CarCare</string>
+    <string name="title_activity_main">CarCare</string>
+    <string name="package_name">com.exisit.carCare</string>
+    <string name="custom_url_scheme">com.exisit.carCare</string>
+</resources>

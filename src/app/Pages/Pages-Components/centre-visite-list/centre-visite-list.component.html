@@ -1,0 +1,33 @@
+<div class="card my-5">
+    <a><div class="btn btn-info" routerLink="/addCentreVisite"><i class="fas fa-plus"></i>     Ajouter Centre Visite</div></a>
+    <div class="card-body">
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Identifiant</th>
+                    <th scope="col">Nom du Centre</th>
+                    <th scope="col">Adresse</th>
+                    <th scope="col">Longitude</th>
+                    <th scope="col">Latitude</th>
+                    <th scope="col">Horaires</th>
+                    <th scope="col">Téléphone</th>
+                    <th scope="col" colspan="2">Manipulations</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let cvi of data">
+                    <td>{{cvi.idCentreVisite}}</td>
+                    <td>{{cvi.nameCentreVisite}}</td>
+                    <td>{{cvi.localCentreVisite}}</td>
+                    <td>{{cvi.longCentreVisite}}</td>
+                    <td>{{cvi.latCentreVisite}}</td>
+                    <td>{{cvi.horiareCentreVisite}}</td>
+                    <td>{{cvi.numeroTelCentreVisite}}</td>
+                    <td><button class="btn btn-success" (click)="RowSelected(cvi)"><i class="fas fa-pen"></i></button></td>
+                    <td><button class="btn btn-danger" (click)="deleteCentreVisite(cvi.idCentreVisite)"><i class="fas fa-trash"></i></button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+

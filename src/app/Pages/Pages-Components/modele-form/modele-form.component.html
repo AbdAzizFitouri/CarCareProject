@@ -1,0 +1,25 @@
+<div class="card my-5">
+    <div class="card-body">
+        <h3>Ajouter Un Modele</h3>
+        <form [formGroup]="formMD" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="nameModele">Nom du Modele</label>
+                <input type="text" formControlName="nameModele"
+                    class="form-control" placeholder="Entrer le nom du Modele" required>
+            </div>
+            <div class="form-group">
+                <label for="nameMarque">Marque Associée</label>
+                <select formControlName="nameMarque" class="form-control" required>
+                    <option value="" disabled selected>-- Choisir une Marque --</option>
+                    <option [ngValue]="mq.nameMarque" *ngFor="let mq of data" value="mq.nameMarque">{{mq.nameMarque}}</option>
+                </select>
+        </div>
+        <div class="form-group">
+            <label for="yearModele">Année de Fabrication</label>
+            <input type="text" formControlName="yearModele" class="form-control"
+                    placeholder="Entrer l'année de Fabrication" required>
+        </div>
+        <button type="submit" [disabled]="!formMD.valid" class="btn btn-success">Ajouter Nouveau Modèle</button>
+        </form>
+    </div>
+</div>

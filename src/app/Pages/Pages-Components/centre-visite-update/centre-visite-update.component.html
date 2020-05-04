@@ -1,0 +1,28 @@
+<div class="card my-5">
+    <div class="card-body">
+        <h3>Modifier une Station</h3>
+        <form [formGroup]="formUCVS" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="idCentreVisite">Identifiant du Centre</label>
+                <input type="text" disabled formControlName="idCentreVisite" class="form-control" id="idCentreVisite" [ngModel]="data.idCentreVisite">
+            </div>
+            <div class="form-group">
+                <label for="nameCentreVisite">Nom du Centre</label>
+                <input type="text" formControlName="nameCentreVisite" id="nameCentreVisite" class="form-control" required [ngModel]="data.nameCentreVisite">
+            </div>
+            <div class="form-group">
+                <label for="localCentreVisite">Adresse</label>
+                <input type="text" formControlName="localCentreVisite" id="localCentreVisite" class="form-control" required [ngModel]="data.localCentreVisite">
+            </div>
+            <div class="form-group">
+                <label for="horiareCentreVisite">Horaires de Travail</label>
+                <input type="text" formControlName="horiareCentreVisite" id="horiareCentreVisite" class="form-control" required [ngModel]="data.horiareCentreVisite">
+            </div>
+            <div class="form-group">
+                <label for="numeroTelCentreVisite">Numéro de Téléphone</label>
+                <input type="text" formControlName="numeroTelCentreVisite" id="numeroTelCentreVisite" class="form-control" required [ngModel]="data.numeroTelCentreVisite">
+            </div>
+            <button type="submit" [disabled]="!formUCVS.valid" class="btn btn-success">Modifier le Centre</button>
+        </form>
+    </div>
+</div>

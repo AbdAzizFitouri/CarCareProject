@@ -1,0 +1,25 @@
+<div class="card my-5">
+    <div class="card-body">
+        <h3>Modifier Une Marque</h3>
+        <form [formGroup]="formUM" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="idMarque">Identifiant de la Marque</label>
+                <input type="text" disabled formControlName="idMarque" id="idMarque"
+                    class="form-control" [ngModel]="data.idMarque">
+            </div>
+            <div class="form-group">
+                <label for="nameMarque">Nom de La Marque</label>
+                <input type="text" formControlName="nameMarque" id="nameMarque"
+                    class="form-control" [ngModel]="data.nameMarque" required>
+            </div>
+            <!--<div [hidden]="!nameMarque.pristine" class="alert alert-danger">Vous devez entrer le nom de la Marque</div>-->
+            <div class="form-group">
+                <label for="paysOrigine">Pays Origine</label>
+                <input type="text" formControlName="paysOrigine" id="paysOrigine" [ngModel]="data.paysOrigine" class="form-control"
+                     required>
+            <!--<div [hidden]="paysOrigine.pristine" class="alert alert-danger">Vous devez entrer le pays</div>-->
+        </div>
+        <button type="submit" [disabled]="!formUM.valid" class="btn btn-success">Modifier la Marque</button>
+        </form>
+    </div>
+</div>

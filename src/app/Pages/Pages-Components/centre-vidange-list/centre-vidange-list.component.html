@@ -1,0 +1,32 @@
+<div class="card my-5">
+    <a><div class="btn btn-info justify-content-center" routerLink="/addCentreVidange"><i class="fas fa-plus"></i>     Ajouter Centre Vidange</div></a>
+    <div class="card-body">
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Identifiant</th>
+                    <th scope="col">Nom du Centre</th>
+                    <th scope="col">Adresse</th>
+                    <th scope="col">Longitude</th>
+                    <th scope="col">Latitude</th>
+                    <th scope="col">Horaires</th>
+                    <th scope="col">Téléphone</th>
+                    <th scope="col" colspan="2">Manipulations</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let cv of data">
+                    <td>{{cv.idCentreVidange}}</td>
+                    <td>{{cv.nameCentreVidange}}</td>
+                    <td>{{cv.localCentreVidange}}</td>
+                    <td>{{cv.longCentreVidange}}</td>
+                    <td>{{cv.latCentreVidange}}</td>
+                    <td>{{cv.horaireCentreVidange}}</td>
+                    <td>{{cv.numeroTelCentreVidange}}</td>
+                    <td><button class="btn btn-success" (click)="RowSelected(cv)"><i class="fas fa-pen"></i></button></td>
+                    <td><button class="btn btn-danger" (click)="deleteCentreVidange(cv.idCentreVidange)"><i class="fas fa-trash"></i></button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="card my-5">
+    <a><div class="btn btn-info justify-content-center" routerLink="/addModele"><span><i class="fas fa-plus"></i>     Ajouter un Modele</span></div></a>
+    <div class="card-body">
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Identifiant</th>
+                    <th scope="col">Nom du Modele</th>
+                    <th scope="col">Nom de la Marque Associée</th>
+                    <th scope="col">Année de Fabrication</th>
+                    <th scope="col" colspan="2">Manipulations</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let modele of data; let i=index">
+                    <td>{{modele.idModele}}</td>
+                    <td>{{modele.nameModele}}</td>
+                    <td>{{modele.marque.nameMarque}}</td>
+                    <td>{{modele.yearModele}}</td>
+                    <td><button class="btn btn-success" (click)="RowSelected(modele)"><i class="fas fa-pen"></i></button></td>
+                    <td><button class="btn btn-danger" (click)="deleteModele(modele.idModele)" ><i class="fas fa-trash"></i></button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

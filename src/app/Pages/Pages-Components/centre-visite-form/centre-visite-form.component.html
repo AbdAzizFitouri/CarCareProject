@@ -1,0 +1,28 @@
+<div class="card my-5">
+    <div class="card-body">
+        <h3>Ajouter Un Centre de Visite</h3>
+        <form [formGroup]="formCVS" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="nameCentreVisite">Nom du Centre</label>
+                <input type="text" formControlName="nameCentreVisite"
+                    class="form-control" placeholder="Entrer le nom du Centre" required>
+            </div>
+            <div class="form-group">
+                <label for="localCentreVisite">Adresse</label>
+                <input type="text" formControlName="localCentreVisite" class="form-control"
+                    placeholder="Entrer l'adresse du Centre'" required>
+        </div>
+        <div class="form-group">
+            <label for="horaireCentreVisite">Horaires de Travail</label>
+            <input type="text" formControlName="horaireCentreVisite" class="form-control"
+                    placeholder="Entrer les Horaires de travail" required>
+        </div>
+        <div class="form-group">
+            <label for="numeroTelCentreVisite">Numéro de Téléphone</label>
+            <input type="text" formControlName="numeroTelCentreVisite" class="form-control"
+                    required>
+        </div>
+        <button type="submit" [disabled]="!formCVS.valid" class="btn btn-success">Ajouter Nouveau Centre</button>
+        </form>
+    </div>
+</div>

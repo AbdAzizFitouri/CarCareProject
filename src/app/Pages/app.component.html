@@ -1,0 +1,57 @@
+<!--<div class="container">
+  <h2 class="d-flex justify-content-center card-title py-3" style="color: blueviolet; font-weight: bolder;">Les Actions de l'Administrateur</h2>
+  <nav class="navbar navbar-expand-sm bg-light navbark-light justify-content-center card ">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a routerLink="/listMarques" class="m1 btn btn-light btn-outline-primary">Marques</a></li>&nbsp;
+      <li class="nav-item"><a routerLink="/listStationsPneumatique" class="m1 btn btn-light btn-outline-primary">Stations Pneumatiques</a></li>&nbsp;
+      <li class="nav-item"><a routerLink="/listCentreVidange" class="m1 btn btn-light btn-outline-primary">Centres de Vidange</a></li>&nbsp;
+      <li class="nav-item"><a routerLink="/listCentreVisite" class="m1 btn btn-light btn-outline-primary">Centres d'inspection Technique</a></li>&nbsp;
+      <li class="nav-item"><a class="m1 btn btn-light btn-outline-primary">Modeles</a></li>&nbsp;
+      <li class="nav-item"><a class="m1 btn btn-light btn-outline-primary">Centres d'Assurance</a></li>
+    </ul>
+  </nav>
+  <div class="row">
+    <div class="col-md-12">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+-->
+<!-- <style>
+  body {
+  background-image: url('Wallpaper v1.0.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style> -->
+<body>
+<div class="wrapper">
+  <div class="sidebar">
+    <h2 style="font-family: 'Pacifico', cursive;">CarCare</h2>
+    
+    <h2 style="font-family: 'Patrick Hand', cursive;">{{greeting}}</h2>
+    <ul>
+      <li><a routerLink="/listMarques"><i class="fas fa-car-alt"></i>Marques</a></li>
+      <li><a routerLink="/listStationsPneumatique"><i class="fas fa-database"></i>Stations Pneumatiques</a></li>
+      <li><a routerLink="/listCentreVidange"><i class="fas fa-oil-can"></i>Centres Vidange</a></li>
+      <li><a routerLink="/listCentreVisite"><i class="fas fa-warehouse"></i>Centres Visite</a></li>
+      <li><a routerLink="/listModele"><i class="fas fa-car-side"></i>Modeles</a></li>
+      <li><a routerLink="/listCentreAssurance"><i class="fas fa-hand-holding-usd"></i>Centres Assurances</a></li>
+      <li><a href=""><i class="fas fa-sign-out-alt"></i>Se Déconnecter</a></li>
+    </ul>
+  </div>
+  <div class="main_content" >
+    <router-outlet>
+      <div class="container">
+        <h1 class="d-flex justify-content-center card-title py-3 navbark-light" style="color: #594f8d; font-weight: bolder; font-family: 'Patrick Hand', cursive;"><i class="fas fa-star" style="color: gold;"></i>&nbsp; Utilisez la barre de Navigation à Gauche pour Consulter les rôles de l'administrateur &nbsp;<i class="fas fa-star" style="color: gold;"></i></h1>
+      </div>
+      
+    </router-outlet>
+  </div>
+</div>
+</body>
+<!--<app-admin-nav>
+<router-outlet></router-outlet>
+</app-admin-nav>
+-->

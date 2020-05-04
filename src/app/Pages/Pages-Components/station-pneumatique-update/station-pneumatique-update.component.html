@@ -1,0 +1,28 @@
+<div class="card my-5">
+    <div class="card-body">
+        <h3>Modifier une Station</h3>
+        <form [formGroup]="formUSP" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="idStationPneumatique">Identifiant de la Station</label>
+                <input type="text" disabled formControlName="idStationPneumatique" class="form-control" id="idStationPneumatique" [ngModel]="data.idStationPneumatique">
+            </div>
+            <div class="form-group">
+                <label for="nameStationPneumatique">Nom de La Station</label>
+                <input type="text" formControlName="nameStationPneumatique" id="nameStationPneumatique" class="form-control" required [ngModel]="data.nameStationPneumatique">
+            </div>
+            <div class="form-group">
+                <label for="localStationPneumatique">Adresse</label>
+                <input type="text" formControlName="localStationPneumatique" id="localStationPneumatique" class="form-control" required [ngModel]="data.localStationPneumatique">
+            </div>
+            <div class="form-group">
+                <label for="horiareStationPneumatique">Horaires de Travail</label>
+                <input type="text" formControlName="horiareStationPneumatique" id="horiareStationPneumatique" class="form-control" required [ngModel]="data.horiareStationPneumatique">
+            </div>
+            <div class="form-group">
+                <label for="numeroTelStationPneumatique">Numéro de Téléphone</label>
+                <input type="text" formControlName="numeroTelStationPneumatique" id="numeroTelStationPneumatique" class="form-control" required [ngModel]="data.numeroTelStationPneumatique">
+            </div>
+            <button type="submit" [disabled]="!formUSP.valid" class="btn btn-success">Modifier la Station</button>
+        </form>
+    </div>
+</div>

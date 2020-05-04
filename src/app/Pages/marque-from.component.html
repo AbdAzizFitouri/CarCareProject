@@ -1,0 +1,20 @@
+<div class="card my-5">
+    <h2>Ajouter une Nouvelle Marque</h2>
+    <div class="card-body">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="nameMarque">Nom de La Marque</label>
+                <input type="text" formControlName="nameMarque"
+                    class="form-control" placeholder="Entrer le nom de la marque" required>
+            </div>
+            <!--<div [hidden]="!nameMarque.pristine" class="alert alert-danger">Vous devez entrer le nom de la Marque</div>-->
+            <div class="form-group">
+                <label for="paysOrigine">Pays Origine</label>
+                <input type="text" formControlName="paysOrigine" class="form-control"
+                    placeholder="Entrer le pays Origine de la Marque" required>
+            <!--<div [hidden]="paysOrigine.pristine" class="alert alert-danger">Vous devez entrer le pays</div>-->
+        </div>
+        <button type="submit" [disabled]="!form.valid" class="btn btn-success">Ajouter Nouvelle Marque</button>
+        </form>
+    </div>
+</div>

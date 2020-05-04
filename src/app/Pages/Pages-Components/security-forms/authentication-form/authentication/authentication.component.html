@@ -1,0 +1,18 @@
+<div class="card my-5">
+    <div class="card-body">
+        <h3>Veuillez Vous Connecter</h3>
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+            <div class="form-group">
+                <label for="loginUserName">Nom d'utilisateur</label>
+                <input type="text" formControlName="loginUserName"
+                    class="form-control" placeholder="Entrer Votre Nom d'utilisateur" required>
+            </div>
+            <div class="form-group">
+                <label for="loginPassword">Mot de Passe</label>
+                <input type="password" formControlName="loginPassword" class="form-control"
+                    placeholder="*********" required>
+        </div>
+        <button type="submit" [disabled]="!loginForm.valid" class="btn btn-success">S'authentifier</button>
+        </form>
+    </div>
+</div>

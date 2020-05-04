@@ -1,0 +1,31 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>Menu Principale</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/listMarques"><i class="fas fa-car-alt"></i>&nbsp;Marques</a>
+      <a mat-list-item routerLink="/listStationsPneumatique"><i class="fas fa-database"></i>&nbsp;Stations Pneumatiques</a>
+      <a mat-list-item routerLink="/listCentreVidange"><i class="fas fa-oil-can"></i>&nbsp;Centres Vidange</a>
+      <a mat-list-item routerLink="/listCentreVisite"><i class="fas fa-warehouse"></i>&nbsp;Centres Visite</a>
+      <a mat-list-item routerLink="/listModele"><i class="fas fa-car-side"></i>&nbsp;Modeles</a>
+      <a mat-list-item routerLink="/listCentreAssurance"><i class="fas fa-hand-holding-usd"></i>&nbsp;Centres Assurances</a>
+      <a mat-list-item href=""><i class="fas fa-sign-out-alt"></i>&nbsp;Se Déconnecter</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>Bienvenue, Admin</span>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+  </mat-sidenav-content>
+</mat-sidenav-container>

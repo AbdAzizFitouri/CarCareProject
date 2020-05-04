@@ -1,0 +1,32 @@
+<div class="card my-5">
+    <a><div class="btn btn-info justify-content-center" routerLink="/addStationPneumatique"><span><i class="fas fa-plus"></i>     Ajouter une Station Pneumatique</span></div></a>
+    <div class="card-body">
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Idnetifiant</th>
+                    <th scope="col">Nom de La Station</th>
+                    <th scope="col">Adresse</th>
+                    <th scope="col">Longitude</th>
+                    <th scope="col">Latitude</th>
+                    <th scope="col">Horaires</th>
+                    <th scope="col">Téléphone</th>
+                    <th scope="col" colspan="2">Manipulations</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let sp of data">
+                    <td>{{sp.idStationPneumatique}}</td>
+                    <td>{{sp.nameStationPneumatique}}</td>
+                    <td>{{sp.localStationPneumatique}}</td>
+                    <td>{{sp.longStationPneumatique}}</td>
+                    <td>{{sp.latStationPneumatique}}</td>
+                    <td>{{sp.horiareStationPneumatique}}</td>
+                    <td>{{sp.numeroTelStationPneumatique}}</td>
+                    <td><button class="btn btn-success" (click)="RowSelected(sp)" ><i class="fas fa-pen"></i></button></td>
+                    <td><button class="btn btn-danger" (click)="deleteStationPneumatique(sp.idStationPneumatique)"><i class="fas fa-trash"></i></button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
